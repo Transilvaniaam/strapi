@@ -1,0 +1,77 @@
+{
+  "kind": "collectionType",
+  "collectionName": "car_submissions",
+  "info": {
+    "singularName": "car-submission",
+    "pluralName": "car-submissions",
+    "displayName": "CarSubmission"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "brand": {
+      "type": "string",
+      "required": true
+    },
+    "model": {
+      "type": "string",
+      "required": true
+    },
+    "model_year": {
+      "type": "integer",
+      "required": true
+    },
+    "fuel_type": {
+      "type": "enumeration",
+      "enum": [
+        "Gasoline (Petrol)",
+        "Diesel",
+        "Ethanol Blends (E10, E15)",
+        "Battery Electric (BEV)",
+        "Hybrid Electric (HEV)",
+        "Plug-in Hybrid Electric (PHEV)",
+        "Compressed Natural Gas (CNG)"
+      ]
+    },
+    "cubic_capacity": {
+      "type": "string"
+    },
+    "colors": {
+      "type": "string"
+    },
+    "mileage": {
+      "type": "decimal",
+      "default": 0
+    },
+    "asking_price": {
+      "type": "decimal"
+    },
+    "first_name": {
+      "type": "string",
+      "required": true,
+      "minLength": 2
+    },
+    "last_name": {
+      "type": "string",
+      "minLength": 2
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "phone_number": {
+      "type": "string",
+      "required": true
+    },
+    "additional_info": {
+      "type": "text",
+      "default": "-"
+    },
+    "license_plate": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

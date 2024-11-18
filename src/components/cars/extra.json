@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_cars_extras",
+  "info": {
+    "displayName": "Extra",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

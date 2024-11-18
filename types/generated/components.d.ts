@@ -1,5 +1,16 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface CarsExtra extends Schema.Component {
+  collectionName: 'components_cars_extras';
+  info: {
+    displayName: 'Extra';
+    icon: 'bulletList';
+  };
+  attributes: {
+    name: Attribute.String & Attribute.Required;
+  };
+}
+
 export interface SharedMetaSocial extends Schema.Component {
   collectionName: 'components_shared_meta_socials';
   info: {
@@ -54,6 +65,7 @@ export interface SharedSeo extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'cars.extra': CarsExtra;
       'shared.meta-social': SharedMetaSocial;
       'shared.seo': SharedSeo;
     }
