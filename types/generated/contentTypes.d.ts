@@ -1032,15 +1032,7 @@ export interface ApiListedCarListedCar extends Schema.CollectionType {
         };
       }>;
     fuel_type: Attribute.Enumeration<
-      [
-        'Gasoline (Petrol)',
-        'Diesel',
-        'Ethanol Blends (E10, E15)',
-        'Battery Electric (BEV)',
-        'Hybrid Electric (HEV)',
-        'Plug-in Hybrid Electric (PHEV)',
-        'Compressed Natural Gas (CNG)'
-      ]
+      ['Gasoline', 'Diesel', 'Electric', 'Hybrid']
     > &
       Attribute.Required &
       Attribute.SetPluginOptions<{

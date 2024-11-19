@@ -51,13 +51,10 @@
       },
       "type": "enumeration",
       "enum": [
-        "Gasoline (Petrol)",
+        "Gasoline",
         "Diesel",
-        "Ethanol Blends (E10, E15)",
-        "Battery Electric (BEV)",
-        "Hybrid Electric (HEV)",
-        "Plug-in Hybrid Electric (PHEV)",
-        "Compressed Natural Gas (CNG)"
+        "Electric",
+        "Hybrid"
       ],
       "default": "Diesel",
       "required": true
