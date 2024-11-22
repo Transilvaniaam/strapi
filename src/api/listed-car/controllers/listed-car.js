@@ -11,7 +11,8 @@ module.exports = createCoreController('api::listed-car.listed-car', ({ strapi })
       const { id } = ctx.params;
   
       const entity = await strapi.db.query("api::listed-car.listed-car").findOne({
-        where: { slug: id }
+        where: { slug: id },
+        populate: ["deep"],
       });
       const sanitizedEntity = await this.sanitizeOutput(entity, ctx);
   
