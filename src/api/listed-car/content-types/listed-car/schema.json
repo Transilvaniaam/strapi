@@ -179,7 +179,7 @@
       },
       "type": "decimal"
     },
-    "dismension_width": {
+    "dimension_width": {
       "pluginOptions": {
         "i18n": {
           "localized": true

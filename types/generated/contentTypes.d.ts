@@ -1131,7 +1131,7 @@ export interface ApiListedCarListedCar extends Schema.CollectionType {
           localized: false;
         };
       }>;
-    dismension_width: Attribute.Decimal &
+    dimension_width: Attribute.Decimal &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
