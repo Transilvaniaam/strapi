@@ -369,7 +369,9 @@
           "localized": true
         }
       },
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "default": "Manual"
     },
     "condition": {
       "pluginOptions": {

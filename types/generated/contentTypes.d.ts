@@ -1259,11 +1259,13 @@ export interface ApiListedCarListedCar extends Schema.CollectionType {
         };
       }>;
     gearbox: Attribute.String &
+      Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
-      }>;
+      }> &
+      Attribute.DefaultTo<'Manual'>;
     condition: Attribute.String &
       Attribute.SetPluginOptions<{
         i18n: {
