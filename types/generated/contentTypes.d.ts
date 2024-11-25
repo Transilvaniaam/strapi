@@ -1281,6 +1281,12 @@ export interface ApiListedCarListedCar extends Schema.CollectionType {
       'oneToOne',
       'api::car-category.car-category'
     >;
+    description: Attribute.RichText &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
