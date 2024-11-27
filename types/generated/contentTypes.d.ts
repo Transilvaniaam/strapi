@@ -966,6 +966,7 @@ export interface ApiIncomingContactIncomingContact
     singularName: 'incoming-contact';
     pluralName: 'incoming-contacts';
     displayName: 'IncomingContact';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -975,6 +976,7 @@ export interface ApiIncomingContactIncomingContact
     email: Attribute.Email & Attribute.Required;
     phone: Attribute.String & Attribute.Required;
     message: Attribute.Text;
+    vehicle: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

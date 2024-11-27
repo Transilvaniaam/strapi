@@ -4,7 +4,8 @@
   "info": {
     "singularName": "incoming-contact",
     "pluralName": "incoming-contacts",
-    "displayName": "IncomingContact"
+    "displayName": "IncomingContact",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -25,6 +26,9 @@
     },
     "message": {
       "type": "text"
+    },
+    "vehicle": {
+      "type": "string"
     }
   }
 }
