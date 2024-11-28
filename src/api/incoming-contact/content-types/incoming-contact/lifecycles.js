@@ -14,10 +14,10 @@ module.exports = {
             html: `<div>
             <ul>
             <li>Name: ${name}</li>
-            <li>Name: ${email}</li>
-            <li>Name: ${phone}</li>
-            <li>Name: ${message}</li>
-            ${vehicle ? `<li>Name: ${vehicle}</li>` : ''}
+            <li>Email address: ${email}</li>
+            <li>Phone number: ${phone}</li>
+            <li>Message: ${message}</li>
+            ${vehicle ? `<li>Vehicle: ${vehicle}</li>` : ''}
             </ul>
             </div>`,
         })
