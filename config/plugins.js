@@ -18,4 +18,32 @@ module.exports = ({ env }) => ({
       },
     },
   },
+  email: {
+    config: {
+      provider: "nodemailer",
+      providerOptions: {
+        host: "mail.transilvaniaam.nl",
+        secure: false,
+        port: 587,
+        tls: {
+          ciphers: "SSLv3",
+          rejectUnauthorized: false,
+        },
+        requireTLS: true,
+        auth: {
+          user: "no-reply@transilvaniaam.nl",
+          pass: "lvDcmtR}{X{C",
+        },
+      },
+      // providerOptions: {
+      //   host: 'localhost',
+      //   port: 1025,
+      //   ignoreTLS: true,
+      // },
+      settings: {
+        defaultFrom: "no-reply@transilvaniaam.nl",
+        defaultReplyTo: "no-reply@transilvaniaam.nl",
+      },
+    },
+  },
 });
