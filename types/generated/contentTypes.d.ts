@@ -1127,24 +1127,6 @@ export interface ApiListedCarListedCar extends Schema.CollectionType {
           localized: false;
         };
       }>;
-    dimension_length: Attribute.Decimal &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: false;
-        };
-      }>;
-    dimension_width: Attribute.Decimal &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    dimension_height: Attribute.Decimal &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: false;
-        };
-      }>;
     wheelbase: Attribute.Decimal &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -1155,18 +1137,6 @@ export interface ApiListedCarListedCar extends Schema.CollectionType {
       Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
-        };
-      }>;
-    consumption_city: Attribute.String &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    consumption_highway: Attribute.String &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
         };
       }>;
     co2_emission: Attribute.Decimal &
@@ -1189,30 +1159,6 @@ export interface ApiListedCarListedCar extends Schema.CollectionType {
         };
       }>;
     service_book: Attribute.String &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    general_condition: Attribute.Enumeration<
-      ['excelent', 'very good', 'good', 'fair']
-    > &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    technical_condition: Attribute.Enumeration<
-      ['excelent', 'very good', 'good', 'fair']
-    > &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    aestetic_state: Attribute.Enumeration<
-      ['excelent', 'very good', 'good', 'fair']
-    > &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1268,18 +1214,6 @@ export interface ApiListedCarListedCar extends Schema.CollectionType {
         };
       }> &
       Attribute.DefaultTo<'Manual'>;
-    condition: Attribute.String &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    purpose: Attribute.String &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     car_category: Attribute.Relation<
       'api::listed-car.listed-car',
       'oneToOne',
