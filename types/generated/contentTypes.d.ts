@@ -1249,6 +1249,79 @@ export interface ApiListedCarListedCar extends Schema.CollectionType {
   };
 }
 
+export interface ApiPopUpPopUp extends Schema.SingleType {
+  collectionName: 'pop_ups';
+  info: {
+    singularName: 'pop-up';
+    pluralName: 'pop-ups';
+    displayName: 'PopUp';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    show: Attribute.Boolean &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }> &
+      Attribute.DefaultTo<false>;
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    content: Attribute.RichText &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    start_date: Attribute.Date &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    end_date: Attribute.Date &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::pop-up.pop-up',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::pop-up.pop-up',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::pop-up.pop-up',
+      'oneToMany',
+      'api::pop-up.pop-up'
+    >;
+    locale: Attribute.String;
+  };
+}
+
 export interface ApiTestimonialTestimonial extends Schema.CollectionType {
   collectionName: 'testimonials';
   info: {
@@ -1345,6 +1418,7 @@ declare module '@strapi/types' {
       'api::car-submission.car-submission': ApiCarSubmissionCarSubmission;
       'api::incoming-contact.incoming-contact': ApiIncomingContactIncomingContact;
       'api::listed-car.listed-car': ApiListedCarListedCar;
+      'api::pop-up.pop-up': ApiPopUpPopUp;
       'api::testimonial.testimonial': ApiTestimonialTestimonial;
     }
   }
